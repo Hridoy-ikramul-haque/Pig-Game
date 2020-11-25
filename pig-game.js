@@ -84,11 +84,14 @@ document.querySelector('.btn--hold').addEventListener('click' , function(){
     if(scores[activePlayer] >= 100){
       //change the winning player name
       document.querySelector('#name--' + activePlayer).textContent = 'Winner!';
-
+       //hide thr dice
       document.querySelector('.dice').style.display = 'none';
-      document.querySelector('.player--' + activePlayer).classList.add('player--winner');
 
+      //add player--winnwe class 
+      document.querySelector('.player--' + activePlayer).classList.add('player--winner');
+      //remove Active class
       document.querySelector('.player--' + activePlayer).classList.remove('player--active');
+      //off the Game
       gamePlaying = false;
     } else{
       //4.Change the Player
@@ -99,7 +102,7 @@ document.querySelector('.btn--hold').addEventListener('click' , function(){
 
 
 });
-
+//call the initial stage function 
 document.querySelector('.btn--new').addEventListener('click' , initialStage);
 
 
@@ -127,7 +130,7 @@ function nextPlayerChange(){
 
 
 function initialStage(){
-
+//all r zero and game is on. 
 scores = [0,0];
 roundScore = 0;
 activePlayer = 0;
